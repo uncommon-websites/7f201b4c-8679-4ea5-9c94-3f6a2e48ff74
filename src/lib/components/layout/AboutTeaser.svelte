@@ -1,13 +1,14 @@
 <!--
 @component AboutTeaser
-A minimalist teaser for the about page.
+An engaging founder story teaser that builds personal connection and company credibility.
 -->
 <script lang="ts">
 	// Types
-	type TeamMember = {
+	type Founder = {
 		name: string;
 		role: string;
 		image: string;
+		quote: string;
 	};
 
 	// Components
@@ -20,10 +21,11 @@ A minimalist teaser for the about page.
 	let props = $props();
 
 	// Data
-	const teamMember: TeamMember = {
-		name: "Alex Morgan",
-		role: "Founder & CEO",
-		image: "https://www.unc.mn/image-placeholder.svg"
+	const founder: Founder = {
+		name: "Kareem Arab",
+		role: "Founder",
+		image: "/generated/image-a-confident-tech-founder-poses-for-a-pro.webp",
+		quote: "I built Wealth OS because I got tired of spending Sundays manually updating spreadsheets just to know where my money was. I needed something smarter—and cleaner—than anything on the market."
 	};
 </script>
 
@@ -32,22 +34,22 @@ A minimalist teaser for the about page.
 		<div class="relative mx-auto grid max-w-2xl place-items-center gap-16">
 			<ScrollText
 				class="text-title1 text-center"
-				text={`"We're building the future of digital experiences, crafting innovative solutions that transform how people interact with technology in their everyday lives"`}
+				text={`"${founder.quote}"`}
 			/>
 
-			<!-- Team Member & CTA Section -->
+			<!-- Founder & CTA Section -->
 			<div class="grid items-center gap-8 dark:border-gray-800">
 				<div class="flex items-center justify-start gap-4">
 					<img
-						src={teamMember.image}
-						alt={teamMember.name}
+						src={founder.image}
+						alt={founder.name}
 						class="size-12 rounded-full object-cover"
 					/>
 					<div>
-						<div class="text-callout">{teamMember.name}</div>
-						<div class="text-caption text-emphasis-low">{teamMember.role}</div>
+						<div class="text-callout">{founder.name}</div>
+						<div class="text-caption text-emphasis-low">{founder.role}</div>
 					</div>
-					<Button href="/about" variant="secondary" size="sm" class="ml-8">Read more</Button>
+					<Button href="/about" variant="secondary" size="sm" class="ml-8">Our story</Button>
 				</div>
 			</div>
 		</div>

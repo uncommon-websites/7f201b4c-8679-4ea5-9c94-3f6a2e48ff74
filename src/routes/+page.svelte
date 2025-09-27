@@ -83,5 +83,22 @@
 		}
 	]}
 />
-<AboutTeaser generating />
-<CallToAction generating />
+<AboutTeaser />
+<CallToAction
+	title="Know where all your money lives"
+	subtitle="Get early access"
+	description="Stop jumping between apps, spreadsheets, and dashboards. Get a single view of your wealth—automatically consolidated, intelligently summarized, and delivered where you already work."
+	imageSrc="/generated/image-a-confident-tech-professional-in-a-moder.webp"
+	callsToAction={[
+		{
+			href: "#early-access",
+			label: "Get early access",
+			variant: "primary"
+		},
+		{
+			href: "#learn-more",
+			label: "Learn how it works",
+			variant: "secondary"
+		}
+	]}
+/>
